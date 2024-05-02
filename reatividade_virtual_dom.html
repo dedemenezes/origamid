@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+</head>
+<body>
+  <div id="commerce">
+    <p>Bermuda R$ {{price}}</p>
+    <button @click="total++">Add</button>
+    <button @click="total--">Remove</button>
+    <p>In cart: <span>{{total}}</span></p>
+    <p>Total: <span>R$ {{price * total}}</span></p>
+  </div>
+
+  <script>
+    const vm = new Vue({
+      el: '#commerce',
+      data: {
+        price: 49,
+        total: 0
+      }
+    })
+  </script>
+</body>
+</html>

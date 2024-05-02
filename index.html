@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue JS - Course</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>{{header}} <span>by {{author}}</span></h1>
+      <p>Definimos as variaveis reativas dentro da chave <em>data</em> no nosso componente</p>
+      <p>Para ler essas mesmas variáveis, utilizamos a sintaxe do <em>mustache</em> <strong>{{}}</strong></p>
+      <ul>
+        <li>
+          <a href="./reatividade_virtual_dom.html">Aula 0105 - Reatividade e Virtual Dom</a>
+        </li>
+      </ul>
+    </div>
+    <script>
+      const vueModel = new Vue({
+        el: '#app',// element pai do vue
+        // dentro de data teremos as variáveis reativas
+        data: {
+          header: 'Vue JS - Origamid',
+          author: "Andre Rafael"
+        }
+      })
+      console.log(vueModel);
+    </script>
+  </body>
+</html>
